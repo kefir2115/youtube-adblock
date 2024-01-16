@@ -1,0 +1,80 @@
+$bg: rgb(25, 25, 25);
+$bg2:rgb(34, 34, 34);
+$col: white;
+
+body {
+    background-color: $bg;
+    color: $col;
+    margin: 0 !important;
+    padding: 0 !important;
+    .head {
+        height: 3rem;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    .mid {
+        $leftW: 10rem;
+        height: calc(100vh - 3rem);
+        .left {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: calc(100vh - 3rem);
+
+            width: $leftW;
+            box-shadow: 0 0 10px $bg2;
+            .item {
+                margin: .3rem .5rem;
+                padding: .5rem;
+                font-size: 1.25rem;
+                border-radius: 1rem;
+
+                background-color: darken($bg, 2);
+                cursor: pointer;
+                &::after {
+                    content: '';
+                    display: block;
+                    width: 0%;
+                    opacity: 0;
+                    height: 1px;
+                    background-color: white;
+
+                    transition: .35s ease-in-out;
+                }
+                &:hover::after {
+                    width: 100%;
+                    opacity: 1;
+                }
+            }
+        }
+        .content {
+            width: 100vw;
+            margin-left: $leftW;
+            padding: 1rem;
+            .segment {
+                &[highlight] {
+                    background-color: $bg2;
+                }
+                border-radius: 1rem;
+                padding: 1rem;
+                .title {
+                    font-size: 150%;
+                    font-weight: 750;
+                }
+                .title-s {
+                    font-size: 120%;
+                    font-weight: 550;
+                }
+                .rest {
+                    padding-left: 1rem;
+                    &::before {
+                        position: absolute;
+                        content: '●';
+                        display: inline-block;
+                        transform: translate(-1rem, 0);
+                    }
+                }
+            }
+        }
+    }
+}

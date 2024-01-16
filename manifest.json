@@ -1,0 +1,23 @@
+{
+    "manifest_version": 3,
+    "name": "YT ad remover",
+    "description": "Add youtube to whitelist, and download this extension",
+    "version": "1.0",
+    "content_scripts": [
+        {
+            "js": [
+                "noads.js"
+            ],
+            "matches": [
+                "https://*.youtube.com/*"
+            ]
+        }
+    ],
+    "permissions": [
+        "storage"
+    ],
+    "options_ui": {
+        "page": "options/index.html",
+        "open_in_tab": true
+    }
+}

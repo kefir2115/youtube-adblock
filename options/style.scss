@@ -1,0 +1,27 @@
+$bg: rgb(10, 10, 10);
+$theme: rgb(22, 78, 131);
+body {
+    padding: 0 !important;
+    background-color: $bg;
+    color: white;
+    .top {
+        font-size: 2rem;
+        box-shadow: 0 0 10px 5px black;
+        padding: 0 1rem;
+    }
+    .bot {
+        margin: 0rem;
+        height: calc(100vh - 7rem);
+        .settings {
+            width: 70%;
+            box-shadow: 0 0 10px 5px black;
+            text-align: center;
+            .category {
+                font-weight: 700;
+                font-size: 1.5rem;
+                border-bottom: 1px solid white;
+                margin: 0 2rem;
+            }
+        }
+    }
+}

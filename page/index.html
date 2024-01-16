@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Youtube Adblocker</title>
+        <link rel="stylesheet" href="bootstrap.min.css">
+        <link rel="stylesheet" href="style.min.css">
+    </head>
+    <body class="container-fluid">
+        <div class="head row d-flex align-items-center justify-content-center">
+            <h1 class="text-center">Youtube Adblocker</h1>
+        </div>
+        <div class="mid d-flex flex-row">
+            <div class="left">
+                <div class="item" target="overview">Overview</div>
+                <div class="item" target="download">Download</div>
+                <div class="item" target="supporting">Supporting</div>
+                <div class="item" target="contact">Contact</div>
+            </div>
+            <div class="content">
+                <div class="segment" id="overview">
+                    <div class="title">Overview</div>
+                    <div class="rest">Recently youtube announced that adblockers no longer work on their platform, so i came up with a sollution that should make everyone happy. Yes, you heard me, the viewers won't have to watch annoying ads and creators will still gain money for watching ad.</div>
+                    <div class="title-s">How creators gain money from watching ads</div>
+                    <div class="rest">The youtube give a creator their money from ads based on how many people watched WHOLE ad, this extension makes sure that the viewer wont see a single second of ad but trick the youtube to think that he watched whole.</div>
+                </div>
+                <div class="segment" id="download">
+                    <div class="title">Download</div>
+                    <div class="rest">Downloading is pretty straightforward, just download <a href="antiAdExtension.zip" download="youtube-adblock.zip">this zip</a> (there are all the necessary files for extension to work)</div>
+                    <div class="rest">Next, unzip the file. You should be left with the folder with a few files</div>
+                    <div class="rest">Next, open chrome, <b>press 3 dot icon</b> on the right-top of chrome window, then follow <b>Extensions>Manage Extensions</b>, new tab should open</div>
+                    <div class="rest">Lastly, click the <b>'Load unpacked'</b> button on top-left corner of the page and select the previously unpacked folder</div>
+                    <div class="title-s">That's it! You can now watch youtube without ads!</div>
+                </div>
+                <div class="segment" id="supporting">
+                    <div class="title">Support our project</div>
+                    <div class="rest">Please consider donating on one of these pages for creating this helpful extension</div>
+                    <ul>
+                        <li><a href="https://patreon.com/kefir124">Patreon</a></li>
+                        <li><a href="https://www.buymeacoffee.com/kefirr">BMAC</a></li>
+                        <li><a href="https://www.paypal.me/kefirdev">PP</a></li>
+                    </ul>
+                </div>
+                <div class="segment" id="contact">
+                    <div class="title">Contact</div>
+                    <div class="rest">For any help, suggestions or ideas, please dm me on discord</div>
+                    <h5>Discord name: <i>kefirr_</i></h5>
+                </div>
+            </div>
+        </div>
+        <script>
+            document.querySelectorAll(".left .item").forEach(e => {
+                let target = document.querySelector("#"+e.getAttribute("target"));
+                e.addEventListener("mouseenter", ev => {
+                    target.setAttribute("highlight", "");
+                })
+                e.addEventListener("mouseleave", ev => {
+                    target.removeAttribute("highlight");
+                })
+            });
+        </script>
+    </body>
+</html>
